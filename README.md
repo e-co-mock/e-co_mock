@@ -5,4 +5,6 @@
 初回登録
 
 ##メンバー
-*testmember
+*g-murakami
+*mieee
+*widevideo
