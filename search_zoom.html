@@ -5,22 +5,43 @@
 <title>イーコ | 画像・動画検索結果</title>
 <link rel="stylesheet" type="text/css" href="css/common.css" media="all">
 <link rel="stylesheet" type="text/css" href="css/reset.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/slider.css" media="all" />
 </head>
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="js/easySlider1.7.js"></script>
 <script type="text/javascript">
-<!--
-function closewin() {
-	window.close();
-}
-// -->
+    $(document).ready(function(){	
+    $("#slider").easySlider({
+    speed: 1000,  // スクロールスピード設定
+    pause: 7000,  // 表示時間設定
+    auto: false, 
+    continuous: true
+    });
+    });	
 </script>
 <body class="back">
         
     <div id="main" style="padding: 20px 30px 30px;"><!--- main --->
-        <div class="zoom"><img src="img/zoom/img.png"></div>
+        
+        <!-- slider -->
+        <div id="container">
+        	<div id="content">
+			<div id="slider">
+        	    <ul>
+				<li><img src="img/zoom/img.png" /></li>
+        	       	<li><img src="img/zoom/img2.png" /></li>
+                 <li><img src="img/zoom/img3.png" /></li>
+			</ul>
+      	    </div>
+		</div>
+      	</div>
+		<!-- slider_end -->
+        
+        
         <div class="zoom_menu">
-            <div class="registration" style="float: left; margin-right: 20px;"><a href="javascript:closewin();">×閉じる</a></div>
-            <div class="zoom_wrap"><a href="search_index.html"><div class="zoom_btn"><div class="zoom_text">この写真をダウンロード</div></div></a></div>
-            <div class="zoom_wrap"><a href="search_index.html"><div class="zoom_btn"><div class="zoom_text">一括ダウンロードに入れる</div></div></a></div>
+            <div class="registration" style="float: left; margin-right: 20px;"><a href="#" onClick="window.close(); return false;">×閉じる</a></div>
+            <div class="zoom_wrap"><a href="#"><div class="zoom_btn"><div class="zoom_text">この写真をダウンロード</div></div></a></div>
+            <div class="zoom_wrap"><a href="#"><div class="zoom_btn"><div class="zoom_text">一括ダウンロードに入れる</div></div></a></div>
         </div>
     </div><!--- main_end --->
 
